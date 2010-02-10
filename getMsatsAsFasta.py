@@ -13,7 +13,7 @@ import MySQLdb		# database fuctions
 import bx.seq.twobit
 
 # connect to database:
-conn = MySQLdb.connect(host = "localhost", user = "nick", passwd = "", db = "MSATS")
+conn = MySQLdb.connect(host = "localhost", user = "nick", passwd = "valve123", db = "MSATS")
 cursor = conn.cursor()
 
 query = """select M.type, M.repeat_number, M.repeat_seq, M.fasta_id, M.start_loc, M.stop_loc
@@ -26,6 +26,7 @@ cursor.execute(query)
 
 # setup twobit:
 twobit_path = '/Users/nick/Desktop/Genomes/anoCar1/anoCar1.2bit'
+print twobit_path
 t = bx.seq.twobit.TwoBitFile(file(twobit_path))
 
 #seq = t['contig_8'][10:100]
