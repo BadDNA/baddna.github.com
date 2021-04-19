@@ -67,4 +67,7 @@ docker pull gbrodri/my-r-image:WorkingModel
 docker run -dp 8787:8787 my-r-image
 # Your username and password will both be rstudio
 
+#Follow the excellent tutorial by Jordan Bisanz 
+#https://forum.qiime2.org/t/tutorial-integrating-qiime2-and-r-for-data-visualization-and-analysis-using-qiime2r/4121
+
 
