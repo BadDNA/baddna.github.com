@@ -65,7 +65,11 @@ docker pull gbrodri/my-r-image:WorkingModel
 
 #To run the container
 docker run -dp 8787:8787 my-r-image
+# To access RStudio, you will enter your "Your IP address:8787" into the url of your browser. 
+#   Mind the fact the the url will be dependent on what machine your are running this on, local/virtual. 
 # Your username and password will both be rstudio
+
+# Once you are in, you can use RStudio like you normally would!
 
 #Follow the excellent tutorial by Jordan Bisanz 
 #https://forum.qiime2.org/t/tutorial-integrating-qiime2-and-r-for-data-visualization-and-analysis-using-qiime2r/4121
