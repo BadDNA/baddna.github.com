@@ -1,51 +1,35 @@
-# Setup
-# We need to connect to atomsphere
+###########################################
+#               Setup Terminal            #
+###########################################
+
+# We need to connect to atomsphere.
+#   Note: You can you this program on you local computer but this allows for greater flexibility in computing power and memory.
 
 $ ssh your_cyverse_username@your.atmosphere.ip.address
 
 ssh grodriguez@128.196.142.26
 
-# If connecting for the first time, you may be get a security prompt
+# If connecting for the first time, you may be get a security prompt.
 
 The authenticity of host '128.196.64.200 (128.196.64.200)' can\'t be established.
 ECDSA key fingerprint is SHA256:fzEJLqeljHgIwcGY0gUap2sRWLlGPQwUVimhEgkJYBs.
 Are you sure you want to continue connecting (yes/no)?
 
-# you may accept this prompt by typing yes
-
+# You may accept this prompt by typing 'yes'.
 # Enter Password
 
-#Establish Superuser 
+# Establish Superuser 
 sudo su
-#Enter password when prompted
+# Enter password when prompted, same as CyVerse Password.
+#   Note: This is needed to run the docker steps, otherwise you will need to include sudo in front of all your commands. 
 
-# Importing Data 
-
-$ iinit
-
-# As prompted, enter the following values:
-# Host: data.cyverse.org
-# Port: 1247
-# User: your_cyverse_username
-# Zone: iplant
-# Password: your_cyverse_password
-
-# Testing Config for Data Store
-$ ils
-
-# To get a file Use
-$iget data_store_file
-
-# To upload from our instance to Data Store
-$iget file_on_instance location_on_data_store
-
-
-# Getting Rocker set up
-
+###########################################
+#          Getting Rocker set up          #
+###########################################
 # Install Docker
 snap install Docker
 
-#  This installs our R Studio with the base packages and more
+#  This installs our R Studio with the base packages and more. 
 mkdir rocker-tutorial
 cd rocker-tutorial
 docker run rocker/ropensci
@@ -75,3 +59,24 @@ docker run -dp 8787:8787 my-r-image
 #https://forum.qiime2.org/t/tutorial-integrating-qiime2-and-r-for-data-visualization-and-analysis-using-qiime2r/4121
 
 
+#####################################################
+#                   Importing Data                  #
+#####################################################
+
+$ iinit
+
+# As prompted, enter the following values:
+# Host: data.cyverse.org
+# Port: 1247
+# User: your_cyverse_username
+# Zone: iplant
+# Password: your_cyverse_password
+
+# Testing Config for Data Store
+$ ils
+
+# To get a file Use
+$iget data_store_file
+
+# To upload from our instance to Data Store
+$iget file_on_instance location_on_data_store
