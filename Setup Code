@@ -58,8 +58,8 @@ docker run rocker/ropensci
 # Once you have the Dockerfile created, run this line to 
 docker build -t my-r-image .
 
-# This will take some time, so grab a coffe, go outside, and get some fresh air. 
-# Currently there exist an. image and this is much faster to install
+# This will take some time, so grab a coffe, go outside, and get some fresh air. There is another option!
+# Currently there exist an image and this is much faster to install
 # Pull Docker image 
 docker pull gbrodri/my-r-image:WorkingModel
 
